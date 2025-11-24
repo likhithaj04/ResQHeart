@@ -1,0 +1,41 @@
+.admin-dashboard {
+  display: flex;
+  height: auto;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 3rem;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 240px;
+  background-color: #4e322e;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1rem;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  padding: 0.8rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebar-nav li:hover {
+  background-color: #663f3a;
+  padding-left: 17px;
+}

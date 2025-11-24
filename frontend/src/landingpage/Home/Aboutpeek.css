@@ -1,0 +1,145 @@
+/* === SECTION === */
+.about-us-section {
+  background: #c55a0363; /* warm brown/terracotta */
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  width: 100%;        /* full width */
+  margin: 0;          /* remove gaps from parent */
+  padding: 6rem 4rem; /* balanced spacing instead of inline 9rem */
+}
+
+
+/* === HEADINGS === */
+.section-subtitle {
+  color: #3b1f03;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.about-title {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  color: #221710;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  color: #22190d;
+  margin-bottom: 40px;
+}
+
+/* === ICON CARDS === */
+.about-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.icon-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.icon-card i {
+  font-size: 1.8rem;
+  color: #b67230;
+}
+
+.icon-card h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #221710;
+}
+
+.icon-card p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* === MASONRY GRID === */
+.about-grid {
+  column-count: 2;
+  column-gap: 30px;
+}
+
+.grid-item {
+  break-inside: avoid;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* === STAT CARDS === */
+.stat-card {
+  background: #693705;
+  color: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+}
+.stat-card.dark{
+  background-color: #532c0248;
+}
+
+.stat-card.light {
+  background: #f7f2edb6;
+  color: #221710;
+}
+
+.stat-card h4 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.stat-card p {
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+}
+
+.stat-card h2 {
+  margin: 15px 0 0;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* === IMAGE CARDS === */
+.image-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Uneven image heights */
+.image-card.tall img {
+  height: 350px;
+}
+
+.image-card.short img {
+  height: 200px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .about-grid {
+    column-count: 1;
+  }
+
+  .about-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}

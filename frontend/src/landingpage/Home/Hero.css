@@ -1,0 +1,174 @@
+.containers {
+  background-image: url('../assets/adoption1.webp');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  min-width:100%;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem;
+  position: relative;
+  
+}
+.about-hero {
+  position: relative;
+  min-height: 97vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  align-items: center;   
+  justify-content: flex-start;
+  padding-left: 4rem;    
+}
+
+.title-animate {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 900;
+  font-size: 160px;
+  animation: titleFadeZoom 1.8s ease-out forwards;
+  opacity: 0;
+  text-align: right;
+  width: 100%;
+  margin-bottom: -4.5rem;
+  padding-right: 2rem; 
+    color: white;
+
+}
+
+
+@keyframes titleFadeZoom {
+  0% {
+    transform: translateY(-40px) scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.resq-card {
+  
+  display:flex;
+  padding:60px;
+  max-width: 30rem;
+  height:35rem;
+  margin-left:7rem !important;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color:rgba(231, 219, 213, 0.66) !important;
+  color: rgba(0, 0, 0, 1);
+  transition: transform 0.3s ease;@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+.about-hero {
+  position: relative;
+  min-height: 97vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 
+.overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+} */
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.title-animate {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  animation: bounceIn 1.5s ease;
+}
+
+.resq-card {
+  width: 60%;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.4s ease;
+}
+
+.resq-card:hover {
+  transform: scale(1.02);
+}
+
+.donate {
+  background-color: #5c3d00;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.donate:hover {
+  background-color: #422a00;
+  transform: scale(1.05);
+}
+
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.1);
+}
+
+  font-weight: 700;
+}
+
+.resq-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.hover-zoom {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+  background-color: 
+  #4e3231;
+}
+
+.donate{
+    background-color: rgb(150, 102, 102);
+}
+@media (min-width: 1600px) {
+  .container {
+    background-position: center 70%; /* push image up a little */
+  }
+}

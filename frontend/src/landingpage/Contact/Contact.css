@@ -1,0 +1,27 @@
+.main {
+  background-image: url("../../assets/contactbg.jpg");
+  height: 80vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.main h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.texts{
+  margin-left:8rem;
+}

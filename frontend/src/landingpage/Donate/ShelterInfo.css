@@ -1,0 +1,35 @@
+body {
+  background: #f8d9ab48;
+}
+
+h1, h3 {
+  color: #1a3b2e;
+}
+
+.text-warning {
+  color: #d98e04 !important;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* img {
+  object-fit: cover;
+  height:250px
+} */
+
+.allimg{
+    height:25rem;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;
+  margin-top: 2rem;
+}
+
+.remaining{
+  padding: 2.5rem;
+}

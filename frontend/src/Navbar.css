@@ -1,0 +1,54 @@
+
+.custom-navbar{
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(90deg,rgb(245, 244, 241) 0%,rgb(71, 29, 4) 100%);
+  box-shadow: none; 
+  position: absolute; 
+  top:0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  color: #111b08ff;
+}
+
+/* .navbar a,
+.navbar .nav-link {
+  color: #ffffff;
+} */
+
+
+.navbar-nav .nav-link {
+  margin: 0 10px;
+  color:rgba(27, 3, 3, 1) !important;
+  font-weight: 800;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .dropdown-toggle:hover {
+  color:rgb(70, 35, 3) !important;
+}
+
+
+
+.btn-outline-success {
+  color:rgb(71, 45, 41);
+  border-color:rgb(155, 135, 108);
+  background-color: #f1f7ee;
+}
+
+.btn-outline-success:hover {
+  background-color:rgb(233, 212, 209);
+  border-color:rgb(250, 204, 198);
+}
+
+.rotate-hover {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate-hover:hover {
+  transform: rotate(10deg);
+}
+
+

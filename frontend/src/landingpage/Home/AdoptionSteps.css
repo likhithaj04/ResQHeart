@@ -1,0 +1,130 @@
+.adoption-steps {
+  background-color: #faecda;
+  /* background-image: url('../../assets/prints.png'); adjust path as needed */
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 30rem;
+  padding: 5rem 2rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  width:100% !important;
+}
+
+.adoption-steps h1 {
+  font-weight: 800;
+  color: #4e3222;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.adoption-steps p {
+  font-weight: 600;
+  color: #af7655;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.circle-grid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+/* The timeline line behind the circles */
+.circle-grid::before {
+  content: '';
+  position: absolute;
+  top: 150px; /* Halfway through circle height */
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #4e3222;
+  z-index: 0;
+}
+
+
+.circle-step-box {
+  width: 200px;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Bring step above line */
+}
+.circle-img {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #4e3222;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+.circle-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.step-content h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px #4e3222;
+  margin: 0.4rem 0 0 2.3rem;
+}
+
+.step-content h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #4e3222;
+  margin-bottom: 0.3rem;
+    margin: 0.4rem 0 0 2rem;
+
+}
+
+.step-content p {
+  font-size: 0.95rem;
+  color: #5e4a3f;
+    margin: 0.4rem 0 0 2.3rem;
+
+}
+
+/* Animation keyframes */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.circle-step-box:hover {
+  transform: translateY(-19px);
+  transition: transform 0.3s ease;
+}
+.adopt-btn{
+  background-color: #f3b38e;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  color: #061a0c;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  }
+
+  .adopt-btn:hover{
+    background-color: rgb(139, 135, 135);
+  }

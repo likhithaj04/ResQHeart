@@ -1,0 +1,36 @@
+.donate-hero{
+    background-image: url('../../assets/hero.jpg');
+    height:95vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: left;
+}
+.all-contents{
+    position: relative;
+    flex-direction: column;
+    z-index: 2;
+    font-weight: 700;
+    color: aliceblue;
+    margin-bottom: 16rem;
+    font-size: 40px;
+  font-family: 'Comic Sans MS', cursive;
+  margin-left: 40px
+
+}
+.overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.596);
+  z-index: 1;
+}
+.all-contents h2{
+    font-size: 110px;
+        font-family: 'Dancing Script', cursive;
+   font-weight: 900;
+}

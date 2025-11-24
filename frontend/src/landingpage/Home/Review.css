@@ -1,0 +1,109 @@
+.review-section {
+
+background-color: antiquewhite;  
+padding: 5rem 0;
+}
+
+.review-container {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-column {
+  flex: 1;
+}
+
+.image-wrapper {
+  position: relative;
+  max-width: 400px; 
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  height:25rem;
+  border-radius: 20px;
+}
+
+.quote-card {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #310f04f3; 
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  max-width: 85%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.quote-card p {
+  margin: 0 0 0.5rem 0;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.quote-card h5 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.text-column {
+  flex: 1;
+}
+
+.subtitle {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.text-column h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.text-column p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.facts {
+  display: flex;
+  gap: 3rem;
+}
+
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  border: 4px solid #520702ff;
+  border-radius: 50%;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.fact-item h5 {
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.fact-item p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}

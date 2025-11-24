@@ -1,0 +1,15 @@
+.large-table th,
+.large-table td {
+  font-size: 1rem; 
+  padding: 1rem;     
+  width:350px;
+
+}
+
+.large-table th {
+  text-align: center;
+}
+
+.large-table tbody tr {
+  height: 90px; 
+}

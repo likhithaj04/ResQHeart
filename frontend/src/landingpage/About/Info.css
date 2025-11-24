@@ -1,0 +1,21 @@
+.container1{
+  background-color: antiquewhite;
+  width:100%;
+  margin-top: -9rem;
+  /* margin-bottom:-21rem; */
+}
+.all{
+    /* padding:5rem; */
+    margin:14rem;
+  position: relative;
+  z-index: 10;
+  
+}
+.btn{
+    background-color: rgb(97, 56, 6);
+    color: aliceblue;
+}
+.btn:hover{
+    background-color: beige;
+    color:black;
+}
