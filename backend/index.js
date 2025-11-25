@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin:[ 'http://localhost:5173',"res-q-heart-e6fi88pd7-likhithas-projects-582bf488.vercel.app"],
   credentials: true
 }));
 
