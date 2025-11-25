@@ -4,7 +4,7 @@ export default function Hero() {
  return (
   <section className="adoption-hero">
   <video autoPlay loop muted playsInline className="background-video">
-    <source src={heroVideo} type="video/mp4" />
+    <source src={"https://res.cloudinary.com/dgsnugmnb/video/upload/v1764072181/adoptvideo_nat1xi.mp4"} type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
