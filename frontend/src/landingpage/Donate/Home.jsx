@@ -9,7 +9,7 @@ const [shelters,setShelters]=useState([])
   useEffect(()=>{
     axios.get(`${process.env.REACT_APP_API_URL}/shelter`,{withCredentials:true})
     .then(res=>{
-        // console.log("Response:", res.data);
+        console.log("Response:", res.data);
 
       setShelters(res.data.shelters)
     }).catch(err=>{
@@ -21,7 +21,7 @@ const [shelters,setShelters]=useState([])
     <Hero/>
     <div className="containers">
   <div className="row g-4">
-    {shelters.map((shelter, index) => (
+    {shelters?.map((shelter, index) => (
       <div className="col-md-6 mb-4" key={index}>
         <Shelter
         key={index}
