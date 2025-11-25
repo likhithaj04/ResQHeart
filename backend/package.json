@@ -10,8 +10,6 @@
     "start": "nodemon index.js"
   },
   "dependencies": {
-    "@langchain/community": "^0.3.49",
-    "@langchain/core": "^0.3.66",
     "@pinecone-database/pinecone": "^6.1.2",
     "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.2",
@@ -23,7 +21,6 @@
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "langchain": "^0.3.30",
     "method-override": "^3.0.0",
     "mongoose": "^8.16.2",
     "multer": "^2.0.1",
