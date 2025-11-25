@@ -31,7 +31,7 @@ export default function Donation() {
       return;
     }
 
-    const res = await fetch("http://localhost:8080/donate", {
+    const res = await fetch(`${REACT_APP_API_URL}/donate`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials:"include",

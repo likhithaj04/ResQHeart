@@ -23,7 +23,7 @@ export default function ContactUs() {
     e.preventDefault();
 
     try{
-      axios.post("http://localhost:8080/contact",formData,{withCredentials:true});
+      axios.post(`${REACT_APP_API_URL}/contact,formData`,{withCredentials:true});
       setFormData("")
     }
    catch(err){

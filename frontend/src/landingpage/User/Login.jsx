@@ -24,7 +24,7 @@ export default function Login() {
 
     const {username,password}=formData;
   try { 
-    const res= await axios.post("http://localhost:8080/user/login",
+    const res= await axios.post(`${REACT_APP_API_URL}/user/login`,
       {username,password},
       {withCredentials:true
     });

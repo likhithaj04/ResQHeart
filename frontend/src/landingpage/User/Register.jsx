@@ -25,7 +25,7 @@ export default function Register() {
   const handleSubmit = async(event) => {
     event.preventDefault();
 
-    const res= await axios.post('http://localhost:8080/user/register',formData,{
+    const res= await axios.post(`${REACT_APP_API_URL}/user/register`,formData,{
       withCredentials:true
     });
     console.log(res.data);

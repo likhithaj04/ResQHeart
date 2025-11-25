@@ -63,7 +63,7 @@ export default function ShelterForm() {
     }
 
     try {
-      const res = await axios.post('http://localhost:8080/shelter', fd, {
+      const res = await axios.post(`${REACT_APP_API_URL}/shelter`, fd, {
         withCredentials: true,
         headers: { 'Content-Type': 'multipart/form-data' }
       });

@@ -7,7 +7,7 @@ export default function Home() {
 const [shelters,setShelters]=useState([])
  
   useEffect(()=>{
-    axios.get("http://localhost:8080/shelter",{withCredentials:true})
+    axios.get(`${REACT_APP_API_URL}/shelter`,{withCredentials:true})
     .then(res=>{
         // console.log("Response:", res.data);
 

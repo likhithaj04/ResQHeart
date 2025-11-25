@@ -6,7 +6,7 @@ import axios from 'axios'
 export default function UserList() {
     const [user,setUser]=useState([])
     useEffect(()=>{
-        axios.get("http://localhost:8080/admin/getusers",{withCredentials:true})
+        axios.get(`${REACT_APP_API_URL}/admin/getusers`,{withCredentials:true})
         .then(res=>{
           console.log(res.data)
             setUser(res.data)

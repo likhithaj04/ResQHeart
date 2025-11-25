@@ -16,7 +16,7 @@ export default function Navbar() {
    
     const authCheck=async()=>{
       try{
-        const res=await axios.get('http://localhost:8080/check',{
+        const res=await axios.get(`${REACT_APP_API_URL}/check`,{
           withCredentials:true
         });
         if (res.data.success) {
@@ -34,7 +34,7 @@ export default function Navbar() {
 
    const handleLogout=async()=>{
     try{
-      await axios.post('http://localhost:8080/user/logout',{},{
+      await axios.post(`${REACT_APP_API_URL}/user/logout`,{},{
         withCredentials:true
       });
       // localStorage.removeItem('token');

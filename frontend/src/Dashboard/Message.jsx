@@ -9,7 +9,7 @@ export default function Message() {
    let [contacts,setContacts]=useState([])
    
    useEffect(()=>{
-       axios.get("http://localhost:8080/contact")
+       axios.get(`${REACT_APP_API_URL}/contact`)
        .then(res=>{
         setContacts(res.data.contacts)
        }).catch(err=>{

@@ -7,7 +7,7 @@ export default function DonationList() {
     let [form,setForm]=useState([])
       
     useEffect(()=>{
-        axios.get("http://localhost:8080/donate/donationlist",{withCredentials:true})
+        axios.get(`${REACT_APP_API_URL}/donate/donationlist`,{withCredentials:true})
         .then(res=>{
             console.log(res.data);
             setForm(res.data)
