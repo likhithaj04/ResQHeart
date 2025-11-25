@@ -5,12 +5,11 @@ import './Hero.css';
 import  bg1 from '../../assets/Hero/hero1.jpg';
 import  bg2 from '../../assets/Hero/hero2.jpg';
 import  bg3 from '../../assets/Hero/hero3.jpg';
-import  bg4 from '../../assets/Hero/hero4.jpg';
 
 
 
 export default function About() {
-  const images = [bg1, bg2, bg3,bg4];
+  const images = [bg1, bg2, bg3];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
