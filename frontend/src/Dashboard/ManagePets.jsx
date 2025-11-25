@@ -46,7 +46,7 @@ const handleChange = (e) => {
         formData.append('image',fileData);
 
        
-          axios.post(`${REACT_APP_API_URL}/petdata`,formData,{
+          axios.post(`${process.env.REACT_APP_API_URL}/petdata`,formData,{
         }).then(res=>{
           console.log("Pet data added",res.data)
           setPetData({

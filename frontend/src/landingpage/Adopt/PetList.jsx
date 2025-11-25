@@ -19,7 +19,7 @@ export default function PetList() {
   }, []);
 
   const handleDel = (id) => {
-    axios.delete(`${REACT_APP_API_URL}/petdata/${id}`)
+    axios.delete(`${process.env.REACT_APP_API_URL}/petdata/${id}`)
       .then(res => {
         console.log("Deleted Pet:", res.data.deletedPet);
         toast.success("Pet deleted");

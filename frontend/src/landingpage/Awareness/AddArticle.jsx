@@ -48,7 +48,7 @@ export default function AddArticle() {
 //   console.log(pair[0], pair[1]);
 // }
 
-    axios.post('http://localhost:8080/blogs', formData, {
+    axios.post('process.env.REACT_APP_API_URL/blogs', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       },

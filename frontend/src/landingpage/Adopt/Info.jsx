@@ -11,7 +11,7 @@ export default function Info() {
  let [info,setInfo]= useState({})
 
   useEffect(()=>{
-  axios.get(`${REACT_APP_API_URL}/petdata/${id}`)
+  axios.get(`${process.env.REACT_APP_API_URL}/petdata/${id}`)
   .then(res=>{
     setInfo(res.data)
   }).catch(err=>{
@@ -23,7 +23,7 @@ export default function Info() {
 
   const navigation = async () => {
     try {
-      await axios.get(`${REACT_APP_API_URL}/adopt/form`, { withCredentials: true });
+      await axios.get(`${process.env.REACT_APP_API_URL}/adopt/form`, { withCredentials: true });
    navigate(`/form/${id}`)
     } catch (err) {
       // alert("Login to continue")

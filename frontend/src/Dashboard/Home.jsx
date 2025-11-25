@@ -14,7 +14,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    axios.get(`${REACT_APP_API_URL}/admin/stats`, { withCredentials: true })
+    axios.get(`${process.env.REACT_APP_API_URL}/admin/stats`, { withCredentials: true })
       .then(res => {
         setStats(res.data);
       })

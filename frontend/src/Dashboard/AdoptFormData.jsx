@@ -19,7 +19,7 @@ export default function AdoptFormData() {
 
   const handleApprove=async(id)=>{
     try{
-      await axios.post(`${REACT_APP_API_URL}/adopt/decision/${id}/approve`,{},{withCredentials:true});
+      await axios.post(`${process.env.REACT_APP_API_URL}/adopt/decision/${id}/approve`,{},{withCredentials:true});
 
       const updatedAdoptions=adoptions.mao((adopt)=>{
         if(adopt._id===id){

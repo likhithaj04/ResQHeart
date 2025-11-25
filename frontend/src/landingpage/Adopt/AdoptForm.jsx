@@ -31,7 +31,7 @@ export default function AdoptForm() {
 
   let handleSubmit=async (event)=>{
         event.preventDefault();
-        await axios.post(`${REACT_APP_API_URL}/adopt/form/${id}`,formData, {
+        await axios.post(`${process.env.REACT_APP_API_URL}/adopt/form/${id}`,formData, {
   withCredentials: true
 });
 

@@ -7,7 +7,7 @@ export default function BLogPosts() {
     let [blogs,setBlogs]=useState([]);
 
 useEffect(()=>{
-  axios.get(`${REACT_APP_API_URL}/blogs`)
+  axios.get(`${process.env.REACT_APP_API_URL}/blogs`)
      .then(res=>{
         console.log(res.data)
         setBlogs(res.data.blogs)
@@ -17,7 +17,7 @@ useEffect(()=>{
 },[])
 
   const handleDelete=(id)=>{
-    axios.delete(`${REACT_APP_API_URL}/blogs/${id}`)
+    axios.delete(`${process.env.REACT_APP_API_URL}/blogs/${id}`)
     .then(()=>{
       toast.error("Blog deleted");
        setBlogs(prev => prev.filter(blog => blog._id !== id));

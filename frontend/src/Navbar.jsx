@@ -16,7 +16,7 @@ export default function Navbar() {
    
     const authCheck=async()=>{
       try{
-        const res=await axios.get(`${REACT_APP_API_URL}/check`,{
+        const res=await axios.get(`${process.env.REACT_APP_API_URL}/check`,{
           withCredentials:true
         });
         if (res.data.success) {

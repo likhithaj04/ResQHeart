@@ -14,7 +14,7 @@ export default function Shelter({id, title, address, summary, imageUrl }) {
   }
 
   const handleDelete=(id)=>{
-     axios.delete(`${REACT_APP_API_URL}/shelter/${id}`).
+     axios.delete(`${process.env.REACT_APP_API_URL}/shelter/${id}`).
      then(res=>{
       toast.success("Shelter Deleted");
       
