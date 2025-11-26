@@ -176,6 +176,3 @@ app.listen(PORT, () => {
 // users.deleteMany({})
 //   .then(() => console.log('All user deleted'))
 //   .catch(err => console.error(err));
-
-
-
