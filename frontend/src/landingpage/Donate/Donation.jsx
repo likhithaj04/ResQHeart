@@ -31,7 +31,7 @@ export default function Donation() {
       return;
     }
 
-    const res = await fetch(`${process.env.REACT_APP_API_URL}/donate`, {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/donate`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials:"include",

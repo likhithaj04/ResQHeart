@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 export default function Awareness() {
   const[blogs,setBlogs]=useState([]) 
   useEffect(()=>{
-    axios.get(`${process.env.REACT_APP_API_URL}/blogs`)
+    axios.get(`${import.meta.env.VITE_API_URL}/blogs`)
     .then(res=>{
       setBlogs(res.data.blogs);
     }).catch(err=>{
@@ -18,7 +18,7 @@ export default function Awareness() {
 
 
   const handleDelete=(id)=>{
-    axios.delete(`${process.env.REACT_APP_API_URL}/blogs/${id}`,{withCredentials:true})
+    axios.delete(`${import.meta.env.VITE_API_URL}/blogs/${id}`,{withCredentials:true})
     .then(()=>{
       toast.success("Blog deleted");
        setBlogs(prev => prev.filter(blog => blog._id !== id));

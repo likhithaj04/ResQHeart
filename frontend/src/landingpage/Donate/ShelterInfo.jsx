@@ -26,7 +26,7 @@ const navigation = async () => {
     useEffect(() => {
     const fetchShelter = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/shelter/${id}`, {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/shelter/${id}`, {
           withCredentials: true,
         });
         setShelter(res.data.shelter);

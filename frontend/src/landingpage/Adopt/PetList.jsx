@@ -11,7 +11,7 @@ export default function PetList() {
   const isAdmin = localStorage.getItem("isAdmin") === "true";
 
   useEffect(() => {
-    axios.get(`${REACT_APP_API_URL}/petdata`)
+    axios.get(`${import.meta.env.VITE_API_URL}/petdata`)
       .then(res => {
         setPets(Array.isArray(res.data) ? res.data : []); 
       })
@@ -19,7 +19,7 @@ export default function PetList() {
   }, []);
 
   const handleDel = (id) => {
-    axios.delete(`${process.env.REACT_APP_API_URL}/petdata/${id}`)
+    axios.delete(`${import.meta.env.VITE_API_URL}/petdata/${id}`)
       .then(res => {
         console.log("Deleted Pet:", res.data.deletedPet);
         toast.success("Pet deleted");

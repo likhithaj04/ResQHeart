@@ -7,7 +7,7 @@ export default function DonationList() {
     let [form,setForm]=useState([])
       
     useEffect(()=>{
-        axios.get(`${process.env.REACT_APP_API_URL}/donate/donationlist`,{withCredentials:true})
+        axios.get(`${import.meta.env.VITE_API_URL}/donate/donationlist`,{withCredentials:true})
         .then(res=>{
             console.log(res.data);
             setForm(res.data)

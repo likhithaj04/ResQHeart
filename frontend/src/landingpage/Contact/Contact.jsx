@@ -23,7 +23,7 @@ export default function ContactUs() {
     e.preventDefault();
 
     try{
-      axios.post(`${process.env.REACT_APP_API_URL}/contact,formData`,{withCredentials:true});
+      axios.post(`${import.meta.env.VITE_API_URL}/contact,formData`,{withCredentials:true});
       setFormData("")
     }
    catch(err){
