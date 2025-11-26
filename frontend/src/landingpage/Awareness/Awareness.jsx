@@ -12,6 +12,7 @@ export default function Awareness() {
     .then(res=>{
       setBlogs(res.data.blogs);
           console.log("BLOG RESPONSE:", res.data);
+        console.log("API URL:", import.meta.env.VITE_API_URL);
 
     }).catch(err=>{
       console.log("error: ",err);

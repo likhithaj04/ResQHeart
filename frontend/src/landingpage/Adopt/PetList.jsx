@@ -14,6 +14,8 @@ export default function PetList() {
     axios.get(`${import.meta.env.VITE_API_URL}/petdata`)
       .then(res => {
         setPets(Array.isArray(res.data) ? res.data : []); 
+        console.log("API URL:", import.meta.env.VITE_API_URL);
+
       })
       .catch(err => console.log(err));
   }, []);
