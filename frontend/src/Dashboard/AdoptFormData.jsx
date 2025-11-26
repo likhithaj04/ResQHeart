@@ -8,7 +8,7 @@ export default function AdoptFormData() {
     let[adoptions,setAdoptions]=useState([]);
 
    useEffect(()=>{
-    axios.get("${import.meta.env.VITE_API_URL}/adopt/form",{withCredentials:true})
+    axios.get(`${import.meta.env.VITE_API_URL}/adopt/form`,{withCredentials:true})
     .then(res=>{
       console.log(res.data)
         setAdoptions(res.data.adoptions)
