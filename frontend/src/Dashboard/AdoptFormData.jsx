@@ -8,7 +8,7 @@ export default function AdoptFormData() {
     let[adoptions,setAdoptions]=useState([]);
 
    useEffect(()=>{
-    axios.get("http://localhost:8080/adopt/form",{withCredentials:true})
+    axios.get("${import.meta.env.VITE_API_URL}/adopt/form",{withCredentials:true})
     .then(res=>{
       console.log(res.data)
         setAdoptions(res.data.adoptions)
@@ -21,7 +21,7 @@ export default function AdoptFormData() {
     try{
       await axios.post(`${import.meta.env.VITE_API_URL}/adopt/decision/${id}/approve`,{},{withCredentials:true});
 
-      const updatedAdoptions=adoptions.mao((adopt)=>{
+      const updatedAdoptions=adoptions.map((adopt)=>{
         if(adopt._id===id){
           return{...adopt,status:'Approved'}
         }
@@ -34,6 +34,28 @@ export default function AdoptFormData() {
       console.log(err)
     }
   }
+  const handleReject = async (id) => {
+  try {
+    await axios.post(
+      `${import.meta.env.VITE_API_URL}/adopt/decision/${id}/reject`,
+      {},
+      { withCredentials: true }
+    );
+
+    const updatedAdoptions = adoptions.map((adopt) => {
+      if (adopt._id === id) {
+        return { ...adopt, status: 'Rejected' };
+      } else {
+        return adopt;
+      }
+    });
+
+    setAdoptions(updatedAdoptions);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 
   return (
     <>
