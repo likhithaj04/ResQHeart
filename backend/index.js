@@ -26,7 +26,7 @@ app.use(cookieParser());
 
 app.use(cors({
   origin: [
-    "res-q-heart-44n8q1kug-likhithas-projects-582bf488.vercel.app"
+    "https://res-q-heart-mah7oeo5x-likhithas-projects-582bf488.vercel.app/"
   ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
