@@ -11,6 +11,8 @@ export default function Awareness() {
     axios.get(`${import.meta.env.VITE_API_URL}/blogs`)
     .then(res=>{
       setBlogs(res.data.blogs);
+          console.log("BLOG RESPONSE:", res.data);
+
     }).catch(err=>{
       console.log("error: ",err);
     });
@@ -45,17 +47,19 @@ export default function Awareness() {
   </div>
 
   
-     {blogs.map((blog)=>( 
-       <Articles 
-        key={blog._id}
-        id={blog._id}
-          title={blog.title}
-          description={blog.content}
-          image={blog.image?.url}
-          user={blog.user?.username || "unknown"}
-          onDelete={handleDelete}
+   {Array.isArray(blogs) &&
+ blogs.map((blog) => (
+   <Articles
+     key={blog._id}
+     id={blog._id}
+     title={blog.title}
+     description={blog.content}
+     image={blog.image?.url}
+     user={blog.user?.username || "unknown"}
+     onDelete={handleDelete}
    />
-     ))}
+ ))}
+
   
     </>
   
