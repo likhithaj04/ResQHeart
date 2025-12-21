@@ -1,5 +1,5 @@
 import React from 'react';
-import statsimg from '../../assets/stats.png'
+import statsImg from '../../assets/stats.png'
 
 export default function Stats() {
   return (
