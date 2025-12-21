@@ -26,7 +26,7 @@ app.use(cookieParser());
 
 app.use(cors({
   origin: [
-    "https://res-q-heart.vercel.app"
+    "https://res-q-heart.vercel.app",
   ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],

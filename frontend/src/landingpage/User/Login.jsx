@@ -31,7 +31,6 @@ export default function Login() {
     // console.log(document.cookie);
 
       if (res.data.success) {
-  // localStorage.setItem('token', res.data.token);
 toast.success('login successfull')     
     localStorage.setItem('isAdmin',res.data.isAdmin);    
 

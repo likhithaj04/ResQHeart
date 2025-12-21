@@ -1,8 +1,9 @@
 import './footer.css';
+import bgimg from  '../assets/footer.webp'; 
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <div className="footer"       style={{ backgroundImage: `url(${bgimg})` }}>
       <div className="footer-overlay"></div>
 
       <div className="footer-line">

@@ -3,7 +3,8 @@ import './App.css'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import Navbar from '../src/Navbar'
+import Layout from './Layout/Layout';
+import Navbar from './Layout/Navbar'
 import HomePage from './landingpage/Home/Home'
 import AboutPage from './landingpage/About/Home'
 import AdoptPage from './landingpage/Adopt/Home'
@@ -18,7 +19,7 @@ import ManagePets from './Dashboard/ManagePets'
 import BlogPosts from './Dashboard/BLogPosts'
 import Message from './Dashboard/Message'
 import AdoptFormData from './Dashboard/AdoptFormData'
-import Footer from '../src/Footer'
+import Footer from './Layout/Footer'
 import { Route, Routes } from 'react-router-dom'
 import Awareness from './landingpage/Awareness/Awareness'
 import Admin from './Dashboard/Admin'
@@ -32,16 +33,17 @@ import UserList from './Dashboard/UserList';
 function App() {
 
   const location = useLocation()
-  const hideFooter = location.pathname === '/Login' || location.pathname === '/register';
-  const hideNavbar = location.pathname === '/Login' || location.pathname === '/register';
+  // const hideFooter = location.pathname === '/Login' || location.pathname === '/register';
+  // const hideNavbar = location.pathname === '/Login' || location.pathname === '/register';
 
   const isAdmin=localStorage.getItem('isAdmin')==='true';
 
   return (
     <>
-      {!hideNavbar && <Navbar />}
 
       <Routes>
+                <Route element={<Layout />}>
+
         <Route path='/' element={<HomePage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/awareness' element={<Awareness />} />
@@ -64,10 +66,10 @@ function App() {
         <Route path='/donation/:id' element={<DonationPage/>}/>
         <Route path='/donationlist' element={<DonationList/>}/>
         <Route path='/userList' element={<UserList/>}/>
+         </Route>
       </Routes>
       <ToastContainer position="top-center" autoClose={3000} />
 
-      {!hideFooter && <Footer />}
 
     </>
   )

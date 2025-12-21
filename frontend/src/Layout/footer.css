@@ -1,6 +1,5 @@
 .footer {
   position: relative;
-  background-image: url('./src/assets/footer.webp'); 
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
