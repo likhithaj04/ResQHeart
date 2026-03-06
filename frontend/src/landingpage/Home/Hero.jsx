@@ -27,7 +27,7 @@ export default function RescueCard() {
       style={{ backgroundImage: `url(${images[currentIndex]})` }}
     >
       <div className="overlay1" />
-      <div className="containers text-white">
+      <div className="containers text-white" style={{width:"46rem"}}>
         <div>
                 <h1 className="display-4 text-center title-animate">ResQHeart</h1>
 </div> 

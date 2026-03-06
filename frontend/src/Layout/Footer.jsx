@@ -1,30 +1,35 @@
 import './footer.css';
-import bgimg from  '../assets/footer.webp'; 
+import bgimg from '../assets/footer.webp';
 
 export default function Footer() {
   return (
-    <div className="footer"       style={{ backgroundImage: `url(${bgimg})` }}>
-      <div className="footer-overlay"></div>
+    <div
+      className="rq-footer"
+      style={{ backgroundImage: `url(${bgimg})` }}
+    >
+      <div className="rq-footer-overlay"></div>
 
-      <div className="footer-line">
+      <div className="rq-footer-banner">
         Ready to Make a Difference? Start by Adopting or Donating 🐾
       </div>
 
-      <div className="footer-content container">
-        <div className="row py-4 text-center text-md-start">
+      <div className="rq-footer-wrapper">
 
-          {/* Column 1 - About */}
-          <div className="col-md-3 mb-4">
+        <div className="rq-footer-grid">
+
+          {/* Column 1 */}
+          <div className="rq-footer-box">
             <h5>ResQHeart</h5>
             <p>
-              A platform to rescue, heal, and rehome strays. Join us to build a world filled with compassion.
+              A platform to rescue, heal, and rehome strays.
+              Join us to build a world filled with compassion.
             </p>
           </div>
 
-          {/* Column 2 - Quick Links */}
-          <div className="col-md-3 mb-4">
+          {/* Column 2 */}
+          <div className="rq-footer-box">
             <h5>Quick Links</h5>
-            <ul className="list-unstyled">
+            <ul>
               <li><a href="/adopt">Adopt</a></li>
               <li><a href="/donate">Donate</a></li>
               <li><a href="/volunteer">Volunteer</a></li>
@@ -32,29 +37,34 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3 - Contact Info */}
-          <div className="col-md-3 mb-4">
+          {/* Column 3 */}
+          <div className="rq-footer-box">
             <h5>Contact</h5>
             <p>Email: support@resqheart.org</p>
             <p>Phone: +91 98765 43210</p>
             <p>Location: Bangalore, India</p>
           </div>
 
-          {/* Column 4 - Newsletter & Socials */}
-          <div className="col-md-3 mb-4">
+          {/* Column 4 */}
+          <div className="rq-footer-box">
             <h5>Subscribe</h5>
-            <form className="newsletter-form">
+
+            <form className="rq-newsletter">
               <input type="email" placeholder="Your Email" />
               <button type="submit">Join</button>
             </form>
-            <div className="social-icons mt-3">
+
+            <div className="rq-socials">
               <a href="#"><i className="fab fa-facebook-f"></i></a>
               <a href="#"><i className="fab fa-instagram"></i></a>
               <a href="#"><i className="fab fa-twitter"></i></a>
               <a href="#"><i className="fab fa-youtube"></i></a>
             </div>
+
           </div>
+
         </div>
+
       </div>
     </div>
   );

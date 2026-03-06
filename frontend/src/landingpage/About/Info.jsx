@@ -8,8 +8,8 @@ export default function Info({ images }) {
         <div className="all mt-4">
           <div className="row" style={{ justifyContent: 'space-around' }}>
 
-            <div className="card md-4" style={{ width: '26rem' }}>
-              <img src={images[0]} className="card-img-top" alt="Feed Strays" />
+<div className="card md-4">           
+     <img src={images[0]} className="card-img-top" alt="Feed Strays" />
               <div className="card-body">
                 <h5 className="card-title">Feed Strays</h5>
                 <p className="card-text">
@@ -21,8 +21,8 @@ export default function Info({ images }) {
               </div>
             </div>
 
-            <div className="card md-4" style={{ width: '26rem' }}>
-              <img src={images[1]} className="card-img-top" alt="Adopt" />
+<div className="card md-4">
+                <img src={images[1]} className="card-img-top" alt="Adopt" />
               <div className="card-body">
                 <h5 className="card-title">Adopt</h5>
                 <p className="card-text">
@@ -34,8 +34,8 @@ export default function Info({ images }) {
               </div>
             </div>
 
-            <div className="card md-4 cd3" style={{ width: '26rem' }}>
-              <img src={images[2]} className="card-img-top" alt="Shelter Support" style={{ height: '22rem' }} />
+<div className="card md-4">
+                <img src={images[2]} className="card-img-top" alt="Shelter Support" style={{ height: '22rem' }} />
               <div className="card-body">
                 <h5 className="card-title">Shelter Support</h5>
                 <p className="card-text">

@@ -9,7 +9,6 @@
   justify-content: center;
   gap: 30px;
   border-radius: 12px;
-  margin-top: -14rem;
   margin-bottom: 2rem;
   box-sizing: border-box;
 }
@@ -70,10 +69,8 @@
   margin: 0;
 }
 
-/* ── Tablet ────────────────────────────────────────────────── */
 @media (max-width: 991px) {
   .about-mission-section {
-    /* Soften the large negative margin that works with .all's 14rem margin */
     margin-top: -8rem;
     padding: 50px 30px;
     border-radius: 10px;
@@ -89,7 +86,6 @@
   }
 }
 
-/* ── Mobile ────────────────────────────────────────────────── */
 @media (max-width: 767px) {
   .about-mission-section {
     margin-top: -4rem;
@@ -125,7 +121,6 @@
   }
 }
 
-/* ── Small Mobile ──────────────────────────────────────────── */
 @media (max-width: 480px) {
   .about-mission-section {
     margin-top: -2rem;
@@ -147,7 +142,7 @@
   }
 
   .mission-card {
-    flex-direction: column;   /* stack icon above text on very small screens */
+    flex-direction: column;  
     align-items: flex-start;
     padding: 16px;
     gap: 10px;

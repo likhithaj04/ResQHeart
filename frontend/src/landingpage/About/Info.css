@@ -1,13 +1,14 @@
 .container1 {
   background-color: antiquewhite;
   width: 100%;
-  margin-top: -9rem;
+  margin-top: -5rem;
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .all {
-  margin: 14rem;
+  margin: 6rem auto;
+  max-width: 1100px;
   position: relative;
   z-index: 10;
 }
@@ -15,6 +16,7 @@
 .btn {
   background-color: rgb(97, 56, 6);
   color: aliceblue;
+  border: none;
 }
 
 .btn:hover {
@@ -22,14 +24,21 @@
   color: black;
 }
 
+/* Card */
+.all .card {
+  width: 10rem;
+}
 
+.all .card img {
+  height: 150px;
+  object-fit:contain;
+}
+
+/* Tablet */
 @media (max-width: 991px) {
-  .container1 {
-    margin-top: -7rem;
-  }
 
   .all {
-    margin: 6rem 3rem;
+    margin: 4rem 2rem;
   }
 
   .all .row {
@@ -38,61 +47,41 @@
   }
 
   .all .card {
-    width: calc(50% - 1rem) !important;
-    flex: 0 0 calc(50% - 1rem);
+    width: 14rem;
   }
 }
 
-                            
+/* Mobile */
 @media (max-width: 767px) {
-  .container1 {
-    margin-top: -5rem;
-  }
-
-  .all {
-    margin: 4rem 1.5rem;
-  }
 
   .all .row {
     flex-direction: column;
-    align-items: center !important;
+    align-items: center;
     gap: 1.5rem;
   }
 
   .all .card {
-    width: 100% !important;
-    max-width: 420px;
-    flex: unset;
+    width: 90%;
+    max-width: 320px;
   }
 
   .all .card img {
-    height: 200px !important;
-    object-fit: cover;
+    height: 180px;
   }
 }
 
+/* Small mobile */
 @media (max-width: 480px) {
-  .container1 {
-    margin-top: -3rem;
-  }
-
-  .all {
-    margin: 3rem 1rem;
-  }
-
-  .all .card {
-    max-width: 100%;
-  }
 
   .all .card img {
-    height: 180px !important;
+    height: 160px;
   }
 
   .all .card .card-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .all .card .card-text {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
   }
 }
