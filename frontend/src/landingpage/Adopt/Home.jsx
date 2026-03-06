@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="container">
+      <div className="containerss">
         <div
           className="wave-content"
           style={{

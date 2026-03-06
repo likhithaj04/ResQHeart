@@ -21,7 +21,7 @@ p {
 }
 
 
-.container {
+.containersed {
   display: flex;
   flex-direction: column;
   padding: 6rem;

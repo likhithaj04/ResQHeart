@@ -37,7 +37,7 @@ export default function PetList() {
   return (
     <div>
       {/* Filter dropdown */}
-      <div className="mb-3">
+      <div className="mb-3 p-5">
         <label className="me-2 fw-bold">Filter:</label>
         <select 
           className="form-select w-auto d-inline-block" 

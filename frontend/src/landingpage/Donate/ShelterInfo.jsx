@@ -42,7 +42,7 @@ const navigation = async () => {
 
   return (
     <>
-    <div className="container py-5">
+    <div className="containersed py-5">
       {/* Hero Section */}
       <div className="row align-items-center mb-5">
         <div className="col-md-6 ">
