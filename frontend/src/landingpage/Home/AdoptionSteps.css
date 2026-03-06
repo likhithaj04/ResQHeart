@@ -1,13 +1,12 @@
 .adoption-steps {
   background-color: #faecda;
-  /* background-image: url('../../assets/prints.png'); adjust path as needed */
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 30rem;
-  padding: 5rem 2rem;
   padding: 4rem 2rem;
   text-align: center;
-  width:100% !important;
+  width: 100% !important;
+  box-sizing: border-box;
 }
 
 .adoption-steps h1 {
@@ -17,7 +16,7 @@
   margin-bottom: 1rem;
 }
 
-.adoption-steps p {
+.adoption-steps > p {
   font-weight: 600;
   color: #af7655;
   max-width: 700px;
@@ -34,11 +33,10 @@
   padding-top: 2rem;
 }
 
-/* The timeline line behind the circles */
 .circle-grid::before {
   content: '';
   position: absolute;
-  top: 150px; /* Halfway through circle height */
+  top: 150px;
   left: 0;
   right: 0;
   height: 4px;
@@ -46,13 +44,18 @@
   z-index: 0;
 }
 
-
 .circle-step-box {
   width: 200px;
   text-align: center;
   position: relative;
-  z-index: 1; /* Bring step above line */
+  z-index: 1;
 }
+
+.circle-step-box:hover {
+  transform: translateY(-19px);
+  transition: transform 0.3s ease;
+}
+
 .circle-img {
   width: 250px;
   height: 250px;
@@ -61,12 +64,11 @@
   overflow: hidden;
   border: 4px solid #4e3222;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
 
 .circle-img img {
   width: 100%;
@@ -86,35 +88,21 @@ display: flex;
   font-size: 1.3rem;
   font-weight: bold;
   color: #4e3222;
-  margin-bottom: 0.3rem;
-    margin: 0.4rem 0 0 2rem;
-
+  margin: 0.4rem 0 0 2rem;
 }
 
 .step-content p {
   font-size: 0.95rem;
   color: #5e4a3f;
-    margin: 0.4rem 0 0 2.3rem;
-
+  margin: 0.4rem 0 0 2.3rem;
 }
 
-/* Animation keyframes */
 @keyframes fadeSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0%   { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-.circle-step-box:hover {
-  transform: translateY(-19px);
-  transition: transform 0.3s ease;
-}
-.adopt-btn{
+.adopt-btn {
   background-color: #f3b38e;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -123,8 +111,140 @@ display: flex;
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s ease;
+}
+
+.adopt-btn:hover {
+  background-color: rgb(139, 135, 135);
+}
+
+@media (max-width: 991px) {
+  .adoption-steps h1 {
+    font-size: 2.4rem;
   }
 
-  .adopt-btn:hover{
-    background-color: rgb(139, 135, 135);
+  .circle-grid {
+    gap: 4rem;
   }
+
+  .circle-grid::before {
+    display: none;
+  }
+
+  .circle-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .step-content h2 {
+    font-size: 3rem;
+    margin-left: 1.5rem;
+  }
+
+  .step-content h3 {
+    font-size: 1.1rem;
+    margin-left: 1.5rem;
+  }
+
+  .step-content p {
+    margin-left: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .adoption-steps {
+    padding: 3rem 1.5rem;
+  }
+
+  .adoption-steps h1 {
+    font-size: 2rem;
+  }
+
+  .circle-grid {
+    gap: 2rem 1.5rem;
+    justify-content: center;
+  }
+
+  .circle-step-box {
+    width: 160px;
+  }
+
+  .circle-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .step-content h2 {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+  }
+
+  .step-content h3 {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  .step-content p {
+    font-size: 0.85rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .adoption-steps {
+    padding: 2.5rem 1rem;
+    background-size: 18rem;
+  }
+
+  .adoption-steps h1 {
+    font-size: 1.6rem;
+  }
+
+  .adoption-steps > p {
+    font-size: 0.88rem;
+    margin-bottom: 2rem;
+  }
+
+  .circle-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .circle-step-box {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .circle-img {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .step-content h2 {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+
+  .step-content h3 {
+    font-size: 0.95rem;
+    margin-left: 0;
+  }
+
+  .step-content p {
+    font-size: 0.82rem;
+    margin-left: 0;
+  }
+
+  .adopt-btn {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.65rem 1rem;
+  }
+}

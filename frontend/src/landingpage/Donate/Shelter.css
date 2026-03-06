@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@700&display=swap');
 
 .card:hover {
   transform: translateY(-5px);
@@ -9,12 +10,69 @@
 }
 
 .card {
-  width:50rem;
+  width: 100% !important;
+  max-width: 100%;
   font-family: 'Poppins', sans-serif;
   background-color: rgb(248, 248, 247);
+  box-sizing: border-box;
 }
 
-.alls{
-    background-color:antiquewhite;
+.alls {
+  background-color: antiquewhite;
 }
 
+.containers {
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+}
+
+.contents.card {
+  height: 400px;
+}
+
+@media (max-width: 991px) {
+  .containers {
+    padding: 1.5rem 2rem;
+  }
+
+  .contents.card {
+    height: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .containers {
+    padding: 1rem;
+  }
+
+  .contents.card {
+    height: auto !important;
+  }
+
+  .contents.card .col-md-6.h-100 img {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .contents.card .col-md-6:first-child {
+    border-radius: 0; 
+  }
+}
+
+@media (max-width: 480px) {
+  .containers {
+    padding: 0.75rem;
+  }
+
+  .contents.card .col-md-6.h-100 img {
+    height: 180px;
+  }
+
+  .contents.card h4 {
+    font-size: 1.2rem;
+  }
+
+  .contents.card p {
+    font-size: 0.88rem;
+  }
+}

@@ -28,7 +28,6 @@ export default function Home() {
           </p><br />
         </div>
 
-        {/* ✅ PetList handles fetching + rendering */}
         <PetList  />
       </div>
     </>

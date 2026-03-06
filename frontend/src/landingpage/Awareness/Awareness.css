@@ -1,0 +1,36 @@
+.awareness-actions {
+  margin: 2rem 3rem;
+  box-sizing: border-box;
+}
+
+.awareness-actions p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .awareness-actions {
+    margin: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .awareness-actions {
+    margin: 1.5rem 1rem;
+  }
+
+  .awareness-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .awareness-actions p {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .awareness-actions {
+    margin: 1rem 0.5rem;
+  }
+}

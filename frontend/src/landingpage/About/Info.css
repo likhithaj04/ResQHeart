@@ -1,21 +1,98 @@
-.container1{
+.container1 {
   background-color: antiquewhite;
-  width:100%;
+  width: 100%;
   margin-top: -9rem;
-  /* margin-bottom:-21rem; */
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.all{
-    /* padding:5rem; */
-    margin:14rem;
+
+.all {
+  margin: 14rem;
   position: relative;
   z-index: 10;
-  
 }
-.btn{
-    background-color: rgb(97, 56, 6);
-    color: aliceblue;
+
+.btn {
+  background-color: rgb(97, 56, 6);
+  color: aliceblue;
 }
-.btn:hover{
-    background-color: beige;
-    color:black;
+
+.btn:hover {
+  background-color: beige;
+  color: black;
+}
+
+
+@media (max-width: 991px) {
+  .container1 {
+    margin-top: -7rem;
+  }
+
+  .all {
+    margin: 6rem 3rem;
+  }
+
+  .all .row {
+    justify-content: center !important;
+    gap: 1.5rem;
+  }
+
+  .all .card {
+    width: calc(50% - 1rem) !important;
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+                            
+@media (max-width: 767px) {
+  .container1 {
+    margin-top: -5rem;
+  }
+
+  .all {
+    margin: 4rem 1.5rem;
+  }
+
+  .all .row {
+    flex-direction: column;
+    align-items: center !important;
+    gap: 1.5rem;
+  }
+
+  .all .card {
+    width: 100% !important;
+    max-width: 420px;
+    flex: unset;
+  }
+
+  .all .card img {
+    height: 200px !important;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .container1 {
+    margin-top: -3rem;
+  }
+
+  .all {
+    margin: 3rem 1rem;
+  }
+
+  .all .card {
+    max-width: 100%;
+  }
+
+  .all .card img {
+    height: 180px !important;
+  }
+
+  .all .card .card-title {
+    font-size: 1.1rem;
+  }
+
+  .all .card .card-text {
+    font-size: 0.88rem;
+  }
 }

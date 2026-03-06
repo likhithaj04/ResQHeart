@@ -1,11 +1,18 @@
+/* Pet detail card */
+.pet-detail-card {
+  border-radius: 4rem;
+  box-sizing: border-box;
+}
+
+/* "Why Adopt" section cards */
 .adopt-card {
   background-color: rgb(241, 231, 218);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 140%;
-  }
+  height: 100%;
+}
 
 .adopt-card:hover {
   transform: translateY(-5px);
@@ -24,4 +31,63 @@
   line-height: 1.6;
 }
 
+/* Pet detail image */
+.pet-detail-img {
+  max-width: 480px;
+  width: 100%;
+}
 
+/* ── Tablet ──────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .adopt-card h5 {
+    font-size: 1.3rem;
+  }
+
+  .pet-detail-card {
+    border-radius: 2rem;
+  }
+}
+
+/* ── Mobile ──────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .adopt-card {
+    padding: 1.5rem;
+  }
+
+  .adopt-card h5 {
+    font-size: 1.15rem;
+  }
+
+  .adopt-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Full-width on mobile */
+  .col-md-4.mb-3 {
+    width: 100%;
+  }
+
+  .pet-detail-card {
+    border-radius: 1.5rem;
+    padding: 1.5rem !important;
+  }
+
+  .pet-detail-img {
+    max-width: 100%;
+  }
+}
+
+/* ── Small Mobile ────────────────────────────────────── */
+@media (max-width: 480px) {
+  .adopt-card {
+    padding: 1.25rem;
+  }
+
+  .adopt-card h5 {
+    font-size: 1rem;
+  }
+
+  .adopt-card p {
+    font-size: 0.85rem;
+  }
+}

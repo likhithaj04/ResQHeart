@@ -1,7 +1,8 @@
 .review-section {
-
-background-color: antiquewhite;  
-padding: 5rem 0;
+  background-color: antiquewhite;
+  padding: 5rem 1.5rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .review-container {
@@ -11,36 +12,40 @@ padding: 5rem 0;
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .image-column {
-  flex: 1;
+  flex: 1 1 40%;
+  min-width: 260px;
 }
 
 .image-wrapper {
   position: relative;
-  max-width: 400px; 
+  max-width: 400px;
   border-radius: 20px;
-  overflow: hidden;
+  overflow: visible; 
 }
 
 .image-wrapper img {
   display: block;
   width: 100%;
-  height:25rem;
+  height: 25rem;
+  object-fit: cover;
   border-radius: 20px;
 }
 
 .quote-card {
   position: absolute;
   bottom: 20px;
-  right: 20px;
-  background: #310f04f3; 
+  right: -10px;
+  background: #310f04f3;
   color: #fff;
   padding: 1rem 1.5rem;
   border-radius: 15px;
   max-width: 85%;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  z-index: 2;
 }
 
 .quote-card p {
@@ -57,7 +62,8 @@ padding: 5rem 0;
 }
 
 .text-column {
-  flex: 1;
+  flex: 1 1 45%;
+  min-width: 260px;
 }
 
 .subtitle {
@@ -72,7 +78,7 @@ padding: 5rem 0;
   color: #333;
 }
 
-.text-column p {
+.text-column > p {
   margin-bottom: 2rem;
   color: #555;
 }
@@ -80,12 +86,14 @@ padding: 5rem 0;
 .facts {
   display: flex;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .fact-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1 1 120px;
 }
 
 .circle {
@@ -100,10 +108,107 @@ padding: 5rem 0;
 .fact-item h5 {
   margin: 1rem 0 0.5rem 0;
   font-weight: 600;
+  text-align: center;
 }
 
 .fact-item p {
   text-align: center;
   font-size: 0.9rem;
   color: #666;
+}
+
+@media (max-width: 991px) {
+  .review-section {
+    padding: 4rem 2rem;
+  }
+
+  .review-container {
+    gap: 2.5rem;
+  }
+
+  .text-column h2 {
+    font-size: 1.75rem;
+  }
+
+  .image-wrapper img {
+    height: 22rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .review-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .review-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .image-column,
+  .text-column {
+    flex: 0 0 100%;
+    min-width: unset;
+    width: 100%;
+  }
+
+  .image-wrapper {
+    max-width: 100%;
+  }
+
+  .image-wrapper img {
+    height: 18rem;
+  }
+
+  .quote-card {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+    right: unset;
+    bottom: unset;
+  }
+
+  .text-column h2 {
+    font-size: 1.5rem;
+  }
+
+  .facts {
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .image-wrapper img {
+    height: 14rem;
+  }
+
+  .quote-card {
+    padding: 0.75rem 1rem;
+  }
+
+  .quote-card p {
+    font-size: 0.85rem;
+  }
+
+  .text-column h2 {
+    font-size: 1.3rem;
+  }
+
+  .circle {
+    padding: 1.4rem;
+    font-size: 1.2rem;
+  }
+
+  .fact-item h5 {
+    font-size: 0.9rem;
+  }
+
+  .fact-item p {
+    font-size: 0.82rem;
+  }
 }

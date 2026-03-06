@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* Section styling */
 .rescue-section {
   background-color: rgb(158, 101, 68);
-  background-image: url('../../assets/prints.png'); /* adjust path as needed */
+  background-image: url('../../assets/prints.png');
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 30rem;
   padding: 5rem 2rem;
   font-family: 'Poppins', sans-serif;
   color: white;
+  box-sizing: border-box;
 }
 
-/* Layout container */
 .rescue-container {
   max-width: 1300px;
   margin: auto;
@@ -23,7 +22,6 @@
   justify-content: space-between;
 }
 
-/* LEFT: Image grid */
 .rescue-left {
   flex: 1 1 45%;
 }
@@ -48,7 +46,6 @@
   transform: scale(1.05);
 }
 
-/* Paw in center */
 .paw-circle {
   position: absolute;
   top: 50%;
@@ -70,7 +67,6 @@
   height: 60px;
 }
 
-/* RIGHT: Content */
 .content {
   flex: 1 1 50%;
 }
@@ -96,7 +92,6 @@
   margin-bottom: 1rem;
 }
 
-/* Button styling */
 .info-btn {
   background-color: #fce4bd;
   border: none;
@@ -111,4 +106,97 @@
 .info-btn:hover {
   background-color: #e8b98f;
   transform: scale(1.05);
+}
+
+@media (max-width: 991px) {
+  .rescue-section {
+    padding: 4rem 2rem;
+    background-size: 22rem;
+  }
+
+  .rescue-left,
+  .content {
+    flex: 1 1 100%;
+  }
+
+  .rescue-img {
+    height: 190px;
+  }
+
+  .content h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .rescue-section {
+    padding: 3rem 1.5rem;
+    background-size: 16rem;
+  }
+
+  .rescue-container {
+    gap: 1.5rem;
+  }
+
+  .rescue-img {
+    height: 150px;
+    border-radius: 8px;
+  }
+
+  .paw-circle {
+    width: 72px;
+    height: 72px;
+  }
+
+  .paw-circle img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rescue-section {
+    padding: 2.5rem 1rem;
+    background-size: 12rem;
+  }
+
+  .rescue-img-grid {
+    gap: 0.6rem;
+  }
+
+  .rescue-img {
+    height: 120px;
+  }
+
+  .paw-circle {
+    width: 56px;
+    height: 56px;
+  }
+
+  .paw-circle img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .content h1 {
+    font-size: 1.3rem;
+  }
+
+  .content p {
+    font-size: 0.86rem;
+  }
+
+  .info-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 1rem;
+  }
 }

@@ -1,25 +1,17 @@
-.donate-hero{
-    background-image: url('../../assets/hero.jpg');
-    height:95vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: left;
-}
-.all-contents{
-    position: relative;
-    flex-direction: column;
-    z-index: 2;
-    font-weight: 700;
-    color: aliceblue;
-    margin-bottom: 16rem;
-    font-size: 40px;
-  font-family: 'Comic Sans MS', cursive;
-  margin-left: 40px
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@900&display=swap');
 
+.donate-hero {
+  background-image: url('../../assets/hero.jpg');
+  height: 95vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: left;
+  overflow: hidden;
 }
+
 .overlay1 {
   position: absolute;
   top: 0;
@@ -29,8 +21,56 @@
   background-color: rgba(0, 0, 0, 0.596);
   z-index: 1;
 }
-.all-contents h2{
-    font-size: 110px;
-        font-family: 'Dancing Script', cursive;
-   font-weight: 900;
+
+.all-contents {
+  position: relative;
+  flex-direction: column;
+  z-index: 2;
+  font-weight: 700;
+  color: aliceblue;
+  margin-bottom: 16rem;
+  font-size: 40px;
+  font-family: 'Comic Sans MS', cursive;
+  margin-left: 40px;
+  max-width: calc(100% - 80px);
+  box-sizing: border-box;
+}
+
+.all-contents h2 {
+  font-size: 110px;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.all-contents p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1199px) {
+  .all-contents h2  { font-size: 85px; }
+  .all-contents      { font-size: 32px; }
+}
+
+@media (max-width: 991px) {
+  .donate-hero      { height: 75vh; }
+  .all-contents h2  { font-size: 68px; }
+  .all-contents      { font-size: 26px; margin-bottom: 8rem; }
+  .all-contents p    { font-size: 1rem; }
+}
+
+@media (max-width: 767px) {
+  .donate-hero      { height: 65vh; min-height: 360px; }
+  .all-contents h2  { font-size: 50px; }
+  .all-contents      { font-size: 20px; margin-bottom: 4rem; margin-left: 20px; max-width: calc(100% - 40px); }
+  .all-contents p    { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+  .donate-hero      { height: 55vh; min-height: 300px; }
+  .all-contents h2  { font-size: 38px; }
+  .all-contents      { font-size: 16px; margin-bottom: 2rem; margin-left: 16px; }
+  .all-contents p    { font-size: 0.85rem; }
 }

@@ -1,0 +1,105 @@
+/* Donation page wrapper — override the inline marginTop/marginBottom */
+.donation-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* Form card */
+.donation-form {
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.donation-form .logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.donation-form .logo-wrap img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.donation-form .logo-wrap h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+}
+
+.donation-form input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s;
+}
+
+.donation-form input:focus {
+  box-shadow: 0 0 0 2px #93c5fd;
+}
+
+.donation-form .donate-btn {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.65rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.donation-form .donate-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.donation-form .powered-text {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+/* ── Mobile ─────────────────────────────────── */
+@media (max-width: 480px) {
+  .donation-wrapper {
+    padding: 1rem 0.5rem;
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+
+  .donation-form {
+    padding: 1.5rem 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .donation-form .logo-wrap h2 {
+    font-size: 1.05rem;
+  }
+
+  .donation-form input {
+    font-size: 0.88rem;
+    padding: 0.55rem 0.65rem;
+  }
+}
